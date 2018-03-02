@@ -12,3 +12,9 @@ https://openid.net/specs/openid-connect-core-1_0.html#Authentication
 
 Url para login/autenticação:  `https://login.audaces.com/core/connect/authorize`
 
+#### Rodar o exemplo
+
+O exemplo apenas depende da lib **Bottle** . Instalação: `pip install bottle` ou instalar através dos requirements: `pip install -r requirements.txt`
+
+Rodar: `python app.py`
+
