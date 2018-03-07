@@ -22,7 +22,7 @@ def login_form_post():
 
 
 def _login_url(by_form_post):
-    authorization_url = 'https://login.audaces.com/core/connect/authorize'
+    authorization_url = 'http://audacesid-dev.cloudapp.net/core/connect/authorize'
     client_id = CLIENT_ID
     redirect_uri = urllib.parse.quote('http://localhost:8080/login/redirect', safe='')
     response_type = 'id_token token'
