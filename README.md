@@ -1,20 +1,22 @@
-# Login Audaces
+# Login with AudacesID
 
-Este projeto é um exemplo de como obter um token de acesso aos serviçoes Audaces através do Login Audaces.
+This project has a very simple example that shows how to authenticate a user and obtain an access token, that can be used to consume a couple of different APIs from Audaces.
 
-Para utilizar o login Audaces é necessário possuir o `client_id` e a URL de redirecionamento já deve estar cadastrada na Audaces.
+Our Identity Server is an implementation of OpenID Connect (https://openid.net/specs/openid-connect-core-1_0.html#Authentication).
 
-Este exemplo mostra o **fluxo implícito**, para saber mais detalhes sobre Autenticação basta verificar diretamente a documentação do openid.
+In order to make use of the login system, you first need to register your application within our Identity Server. Once you have done that, you will receive a `client_id` and we'll also setup an authetication endpoint, that must be a valid endpoint in your application (this endpoint is where you will get an access token in response to a successful authentication).
 
-https://openid.net/specs/openid-connect-core-1_0.html#Authentication
+The current example illustrates the **implicit flow**, and you can learn more about it by reading the OpenID Connect documentation.
 
 #### URL
 
-Url para login/autenticação:  `https://login.audaces.com/core/connect/authorize`
+Authentication URL: `https://login.audaces.com/core/connect/authorize`
 
-#### Rodar o exemplo
+#### Lauching the Example
 
-O exemplo apenas depende da lib **Bottle** . Instalação: `pip install bottle` ou instalar através dos requirements: `pip install -r requirements.txt`
+This sample code is written in Python and requires the **Bottle** library.
 
-Rodar: `python app.py`
+Install it by calling: `pip install bottle` or `pip install -r requirements.txt`
+
+After the install is complete, you may run the application by typing: `python app.py`
 
